@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Engine | AI-Powered Ad Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1E293B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-primary">Ai Engine</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-dark hover:text-primary font-medium">Home</a>
+                    <a href="services.html" class="text-dark hover:text-primary font-medium">Services</a>
+                    <a href="portfolio.html" class="text-dark hover:text-primary font-medium">Portfolio</a>
+                    <a href="about.html" class="text-dark hover:text-primary font-medium">About Us</a>
+                    <a href="contact.html" class="text-dark hover:text-primary font-medium">Contact</a>
+                    <a href="contact.html" class="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition duration-300">Get Free Audit</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-primary">Home</a>
+                <a href="services.html" class="block px-3 py-2 text-base font-medium text-dark hover:text-primary">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-base font-medium text-dark hover:text-primary">Portfolio</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-dark hover:text-primary">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-dark hover:text-primary">Contact</a>
+                <a href="contact.html" class="block px-3 py-2 mt-4 text-base font-medium bg-primary hover:bg-blue-700 text-white rounded-md transition duration-300">Get Free Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4 animate-fade-in">
+                        AI-Powered Advertising <span class="text-primary">That Actually Works</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 animate-fade-in-delay-1">
+                        We combine cutting-edge AI technology with human creativity to deliver advertising campaigns that drive real results for your business.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-delay-2">
+                        <a href="contact.html" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium text-center transition duration-300 transform hover:scale-105">
+                            Get Free Audit
+                        </a>
+                        <a href="services.html" class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-md font-medium text-center transition duration-300">
+                            Our Services
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-6 italic">"Transforming advertising with AI-powered insights"</p>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="AI-Powered Advertising" 
+                         class="rounded-lg shadow-xl animate-float w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">The AI Advantage</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI-powered approach transforms traditional advertising</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Data-Driven Decisions</h3>
+                    <p class="text-gray-600">Our AI analyzes vast amounts of data to identify patterns and opportunities that humans might miss, leading to more effective campaigns.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Lightning-Fast Results</h3>
+                    <p class="text-gray-600">AI-powered optimization means your campaigns start performing faster, with continuous improvements based on real-time data.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Automation That Works</h3>
+                    <p class="text-gray-600">Our AI handles repetitive tasks and optimizations, freeing up human creativity for strategic thinking and breakthrough ideas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive AI-powered marketing solutions tailored to your business needs</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">SEO</h3>
+                    <p class="text-gray-600 mb-4">AI-powered search engine optimization that gets you to the top of search results and drives organic traffic.</p>
+                    <a href="services.html" class="text-primary hover:text-blue-700 font-medium inline-flex items-center">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Marketing Automation</h3>
+                    <p class="text-gray-600 mb-4">Streamline your marketing efforts with intelligent automation that nurtures leads and converts customers.</p>
+                    <a href="services.html" class="text-primary hover:text-blue-700 font-medium inline-flex items-center">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">AI Agents</h3>
+                    <p class="text-gray-600 mb-4">Custom AI agents that work 24/7 to engage with customers, answer questions, and drive conversions.</p>
+                    <a href="services.html" class="text-primary hover:text-blue-700 font-medium inline-flex items-center">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Meta Ads</h3>
+                    <p class="text-gray-600 mb-4">Targeted Facebook and Instagram advertising campaigns that reach your ideal customers with precision.</p>
+                    <a href="services.html" class="text-primary hover:text-blue-700 font-medium inline-flex items-center">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Website Development</h3>
+                    <p class="text-gray-600 mb-4">Beautiful, conversion-focused websites built with the latest technologies and optimized for performance.</p>
+                    <a href="services.html" class="text-primary hover:text-blue-700 font-medium inline-flex items-center">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md transform transition duration-500 hover:scale-105 hover:shadow-lg">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Content Writing</h3>
+                    <p class="text-gray-600 mb-4">Engaging, SEO-optimized content that resonates with your audience and drives action.</p>
+                    <a href="services.html" class="text-primary hover:text-blue-700 font-medium inline-flex items-center">
+                        Learn More
+                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="services.html" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium inline-block transition duration-300 transform hover:scale-105">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We're Best Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Why We're Best in the Industry</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our unique approach combines AI technology with human expertise</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 text-primary p-4 rounded-full inline-flex items-center justify-center w-16 h-16 mb-4">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">Fast Implementation</h3>
+                    <p class="text-gray-600">We deploy campaigns quickly, so you start seeing results sooner.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 text-primary p-4 rounded-full inline-flex items-center justify-center w-16 h-16 mb-4">
+                        <i class="fas fa-chart-pie text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">Data-Driven Strategy</h3>
+                    <p class="text-gray-600">Every decision is backed by solid data and AI-powered insights.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 text-primary p-4 rounded-full inline-flex items-center justify-center w-16 h-16 mb-4">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">Expert Team</h3>
+                    <p class="text-gray-600">Our specialists combine AI tools with years of industry experience.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 text-primary p-4 rounded-full inline-flex items-center justify-center w-16 h-16 mb-4">
+                        <i class="fas fa-sync text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-2">Continuous Optimization</h3>
+                    <p class="text-gray-600">We never stop improving your campaigns for better results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Reviews Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real results from businesses just like yours</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"The AI-powered SEO strategy they implemented increased our organic traffic by 187% in just three months. We're now ranking #1 for our main keywords."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-dark font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Marketing Director, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Their Meta Ads campaign generated a 12x return on ad spend. The AI targeting found customers we didn't even know existed for our business."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-dark font-bold">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">CEO, FitnessPro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"The AI chatbot they built for our website handles 78% of customer inquiries automatically, saving us thousands in support costs while improving satisfaction."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-dark font-bold">Emily Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Operations Manager, RetailPlus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="py-16 bg-primary">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Stay Updated with AI Marketing Trends</h2>
+                <p class="text-xl text-blue-100 mb-8">Subscribe to our newsletter for the latest insights and strategies</p>
+                <form id="subscribe-form" class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Your email address" required class="flex-grow px-4 py-3 rounded-l-md focus:outline-none">
+                    <button type="submit" class="bg-white text-primary hover:bg-blue-50 px-6 py-3 rounded-r-md font-medium transition duration-300 sm:flex-shrink-0">Subscribe</button>
+                </form>
+                <p class="text-blue-100 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Low Paying Clients</h3>
+                    <p class="text-gray-400 mb-4">AI-powered advertising agency delivering results that matter.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">SEO</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Marketing Automation</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">AI Agents</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Meta Ads</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Website Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Content Writing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 AI Boulevard, Digital City, 10101</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-3"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-400">info@aiengine.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-primary mr-3"></i>
+                            <span class="text-gray-400">Mon-Fri: 9AM-6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Ai Engine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
